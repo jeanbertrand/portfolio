@@ -13,13 +13,12 @@
             :key="tag"
             :to="{ name: 'tags-tag', params: { tag: tag }}" class="tag">{{ tag }}</nuxt-link>
         </div>
-        <div class="copy">
-          <vue-markdown>{{post.fields.body}}</vue-markdown>
+        <div>
+          <div class="description">
+            <vue-markdown>{{post.fields.description}}</vue-markdown>
+          </div>
           <div class="gallery">
-            <img
-              v-for="image in post.fields.images"
-              :src="post.fields.image.file.url"
-              />
+            <vue-markdown>{{post.fields.body}}</vue-markdown>
           </div>
         </div>
       </main>
@@ -59,8 +58,19 @@ export default {
 .container.wrapper {
   padding-left:0;
   padding-right:0;
+  max-width: 860px;
 }
 
+.gallery {
+  padding-top:2em;
+  p {
+    img {
+      margin:0 auto;
+      padding: 2em 0;
+      border-bottom: 1px solid $gray-lightest;
+    }
+  }
+}
 .tags {
   margin: 1em 0 2em;
 }
