@@ -15,6 +15,12 @@
         </div>
         <div class="copy">
           <vue-markdown>{{post.fields.body}}</vue-markdown>
+          <div class="gallery">
+            <img
+              v-for="image in post.fields.images"
+              :src="post.fields.image.file.url"
+              />
+          </div>
         </div>
       </main>
     </div>
