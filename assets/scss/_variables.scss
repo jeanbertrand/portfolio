@@ -1,0 +1,62 @@
+// Start with assigning color names to specific hex values.
+$white: #fff ;
+$black: #333 ;
+$orange: #fcb11a ;
+$orange-darken: darken($orange, 10%) ;
+$orange-lighten: lighten($orange, 20%) ;
+$blue: #0275d8 ;
+
+// Create grayscale
+$gray-dark: #21333f ;
+$gray: #334d5c ;
+$gray-light: #7D8893 ;
+$gray-lighter: #aab3bc ;
+$gray-lightest: #f0f5fa ;
+$gray-lightest-darken: darken($gray-lightest, 5%) ;
+$gray-lightest-lighten: lighten($gray-lightest, 25%) ;
+
+// Reassign color vars to semantic color scheme
+$brand-primary: #03C9BA !default;
+
+//typography
+$font-family: 'Nunito',-apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+$font-size-h1: 2rem ;
+$font-size-lg: 1.125rem;
+$font-size-md: .9rem;
+$font-weight-normal: 300 ;
+$font-weight-medium: 400 ;
+$btn-font-weight: 400 ; //font-weight for buttons
+$headings-font-weight: 300 ;
+$headings-line-height: 1.5 ;
+$display-line-height: 1.75 ;
+$heading-letter-spacing: .05rem ;
+$font-smoothing-default: antialiased;
+$headings-color: $gray-dark ;
+$body-color: $gray ;
+$link-hover-color: darken($brand-primary, 5%) ; //link hover color
+
+
+//spacing & borders
+$spacer: .5rem ;
+$border-radius: .5rem ;
+$pill-radius: 5em ;
+$ace-angle: 9vw ;
+$default-opacity: .67;
+$input-border-color: $gray-lightest-darken ;
+$input-color-placeholder: $gray-lightest-darken ;
+$link-hover-decoration: none ;
+$transition-time-fast: 128ms;
+$transition-time-medium: 256ms;
+
+
+//Buttons
+$btn-font-weight: $font-weight-medium ;
+$btn-padding-y: 1rem ;
+$btn-padding-x: 1.5rem ;
+$btn-border-radius: $border-radius ;
+$btn-letter-spacing: .05rem;
+$btn-font-size: $font-size-md;
+$btn-box-shadow: 0 .3125rem 1.5rem rgba($gray, .35);
+
+//cards
+$card-box-shadow: 0 .3125rem 1.5rem rgba($gray, .1);

@@ -1,0 +1,390 @@
+@import '~assets/scss/variables';
+@import '~assets/scss/mixins';
+@import 'node_modules/bootstrap/scss/mixins';
+@import 'node_modules/bootstrap/scss/variables';
+
+.page {
+  @include gradient(to bottom left, $teal, soft-light);
+  background-repeat: space;
+  overflow-y: scroll;
+  min-height: 100vh;
+
+  @include media-breakpoint-down(sm) {
+      background-image: none;
+  }
+
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: absolute;
+    bottom: -630px;
+    transform: skewY(-5deg);
+    transform-origin: 0;
+    z-index: 0;
+    @include media-breakpoint-down(sm) {
+      bottom: -710px;
+    }
+  }
+
+  h1, h2 {
+    font-weight: $font-weight-normal;
+    letter-spacing: $heading-letter-spacing;
+  }
+
+}
+
+.container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+
+  &.callout {
+    padding: 5em 0;
+    margin-bottom: 1.5em;
+  }
+}
+
+.row {
+  display: flex;
+  margin-bottom: 1em;
+  margin-right: 0;
+  margin-left: 0;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+
+  &.centered {
+    div {
+      text-align: center;
+    }
+  }
+  //navbar
+  &.top {
+    padding: 0 1em;
+    background: white;
+    height: 80px;
+    margin-bottom: 0;
+    z-index: 1;
+    .container{
+      display: flex;
+      justify-content: left;
+      align-items: center;
+     }
+
+    img {
+      margin-right: $spacer;
+      padding-right: $spacer;
+
+      &.logo {
+        width: 175px;
+      }
+    }
+  }
+
+  //hero
+  &.hero {
+    height: auto;
+    padding-top: 4em;
+    padding-bottom: 2em;
+    position: relative;
+    color: white;
+    font-weight: $font-weight-normal;
+
+    @include media-breakpoint-down(sm) {
+      [class*=col-] {
+        padding: 0;
+      }
+    }
+
+    h1 {
+      font-size: $font-size-h1;
+      margin-bottom: 1em;
+      line-height: 1.5;
+      width: 100%;
+      text-align: center;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 2em;
+        text-align: center;
+      }
+    }
+
+    ul {
+      letter-spacing: .25px;
+      line-height: 1.75;
+      margin: 0 auto;
+      padding-left: 30px;
+
+      li {
+        list-style-type: circle;
+        margin-bottom: .5em;
+      }
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+      }
+    }
+
+    .video {
+      width: 100%;
+      max-width: 1110px;
+      z-index: 1;
+      .video-container {
+        img {
+          width:100%;
+          max-width: 535px;
+        }
+      }
+
+      iframe {
+        border: none;
+
+        @include media-breakpoint-down(sm) {
+          width: 100%;
+          height: 210px;
+        }
+      }
+    }
+
+    .cta {
+      text-align: left;
+      margin: 2em auto;
+        @include media-breakpoint-down(sm) {
+            text-align: center;
+        }
+    }
+  }
+
+  //features
+  &.features {
+    margin-bottom: 0;
+    padding-bottom: 1.5em;
+
+    .container-fluid {
+      max-width: 1200px;
+      background-color: white;
+
+      .row {
+        align-items: flex-start;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      line-height: 1.5;
+      color: $gray-light;
+      font-weight: 100;
+      letter-spacing: .05em;
+
+      @include media-breakpoint-down(sm) {
+        font-size: 1.75em;
+      }
+    }
+    [class*=col-] {
+      padding: 1em 1.5em;
+      line-height: 1.75;
+      color: $gray-light;
+
+      h5 {
+        font-size: 1.15em;
+        font-weight: 400;
+        line-height: 1.75em;
+        margin: .75em auto;
+        color: $gray-dark;
+      }
+
+      img {
+        max-width: 100px;
+        margin-bottom: .5em;
+      }
+    }
+  }
+
+  //comparison chart
+  &.comparison-chart {
+    .container-fluid {
+      width: 1200px;
+      padding: 3.5em;
+      margin-bottom: 2.5em;
+      background: white;
+      box-shadow: 0 0 20px rgba(0,0,0, .15);
+      border-radius: 5px;
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        padding: 1em 0;
+      }
+    }
+
+    h2 {
+      text-align: center;
+      line-height: 1.5;
+      color: $gray-light;
+      font-weight: 100;
+      letter-spacing: .05em;
+      margin: .5em 0 1.5em;
+    }
+
+    table {
+      color: $gray-light;
+
+      &.table-bordered {
+        border: 1px solid $gray-lightest;
+
+        th, tr, td {
+          border: 1px solid $gray-lightest;
+        }
+      }
+    }
+    th {
+      font-size: 1em;
+      font-weight: 400;
+      color: $gray-dark;
+    }
+    tr {
+      &.title {
+        background-color: rgba($gray-light, .2);
+      }
+    }
+    td {
+      font-size: .9em;
+    }
+  }
+
+  //steps
+  &.steps {
+    background-color: white;
+    margin-bottom: 0;
+    padding: 3em 0;
+    text-align: center;
+    line-height: 1.75;
+
+    .container {
+      max-width: 960px;
+    }
+
+    h2 {
+      margin: .75em 0;
+    }
+
+    .step {
+      padding: 1em 0;
+      border-bottom: 1px solid $gray-lightest;
+      justify-content: center;
+
+      &:first-of-type {
+        margin-top: 2em;
+      }
+
+      img {
+        margin-bottom: 1em;
+      }
+
+      h4 {
+        font-size: 1em;
+        font-weight: 500;
+        color: $gray-dark;
+        line-height: 1.7;
+        width: 100%;
+      }
+
+      p {
+        color: $gray-light;
+        line-height: 1.7;
+        max-width: 80%;
+        @include media-breakpoint-down(sm) {
+          max-width: 90%;
+        }
+      }
+    }
+
+  }
+
+  //reviews
+  &.reviews {
+    background-color: white;
+    padding-bottom: 2em;
+    margin-bottom: 0;
+    .container-fluid {
+      width: 1200px;
+
+      h2 {
+        margin: 1.5em auto;
+        text-align: center;
+        line-height: 1.5;
+        color: $gray-light;
+        font-weight: 100;
+        letter-spacing: .05em;
+
+        @include media-breakpoint-down(sm) {
+          font-size: 1.75em;
+        }
+      }
+
+      .trustpilot-widget {
+        padding: 0 1em;
+      }
+    }
+  }
+
+  //pre-footer
+  &.callout {
+    background-image: url('~static/aceable-drivers-ed-selfies.png');
+    margin-bottom: 0;
+    padding: 2em 0;
+    color: white;
+
+    h2 {
+      margin: .5em auto;
+      text-align: center;
+      line-height: 1.5;
+      letter-spacing: .05em;
+    }
+  }
+}
+
+
+.cta {
+  text-align: center;
+  margin:3em auto;
+
+  .row {
+    justify-content: flex-end;
+  }
+
+  span.price {
+    font-size: 1.5em;
+    padding-right: 10px;
+    border-right: 1px solid rgba($white, .25);
+    border-radius: 0;
+    margin-right: 10px;
+  }
+
+  /*Buttons*/
+  .button {
+    display: inline-block;
+    border-radius: 8px;
+    text-decoration: none;
+    padding: $btn-padding-x;
+    font-weight: $font-weight-normal;
+    letter-spacing: .5px;
+    line-height: 1rem;
+  }
+  .button--cta {
+    font-size: 1.25em;
+    color: $white;
+    box-shadow: $btn-box-shadow;
+    @include gradient(to bottom right, $orange, soft-light);
+
+    &:hover {
+      color: $white;
+      background-color: $orange-darken;
+      text-decoration: none;
+    }
+  }
+  .button--basic {
+    border: 1px solid rgba($teal, .35);
+    color: $teal;
+  }
+}

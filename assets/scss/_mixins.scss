@@ -1,0 +1,32 @@
+@import '~assets/scss/variables';
+@import 'node_modules/bootstrap/scss/mixins';
+
+
+@mixin gradient($direction, $bgcolor, $blend-mode) {
+  background: linear-gradient($direction, $pink, $teal);
+  background-color: $bgcolor;
+  background-blend-mode: $blend-mode;
+}
+
+@mixin gradient-simple($direction, $color1, $color2) {
+  background-image: linear-gradient($direction, $color1, $color2);
+}
+
+@mixin button($radius, $bgcolor, $txtcolor) {
+  background-color: $bgcolor;
+  color: $txtcolor;
+  border-radius: $radius;
+  display: inline-block;
+  text-decoration: none;
+  padding: 1.15em 2.5em;
+  font-weight: 600;
+  line-height: 1rem;
+}
+
+@mixin light-shadow {
+  box-shadow: 0 0 20px rgba($gray-dark, .25)
+}
+
+@mixin dropdown-shadow{
+  box-shadow: 0 5px 10px rgba($gray-dark, .08)
+}
