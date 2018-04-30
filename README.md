@@ -1,35 +1,23 @@
-# blog-in-5-min
 
-> A statically rendered blog based on Contentful
+# Jean-Bertrand Uwilingiyimana
 
-![Preview of the Blog](./docs/images/home.png "Preview of the Blog")
+My personal portfolio website built using [Nuxt.js](https://nuxtjs.org/) and [Contenful](https://www.contentful.com/developers/docs/tutorials/general/get-started/).
 
-This project is the result of our [Interactive getting started CLI tutorial](https://www.contentful.com/developers/docs/tutorials/general/get-started/). The [Contentful CLI](https://www.npmjs.com/package/contentful-cli) helps you automating things like the creation of spaces and access tokens. We recommend using it to bootstrap this project.
+## Build Setup
 
-## Introduction
+``` bash
+# install dependencies
+$ npm install # Or yarn install
 
-The project can be used as a base to get you started with Contentful. It includes the following features:
+# serve with hot reload at localhost:3000
+$ npm run dev
 
-- static site generation
-- dynamic server side rendering for development
-- deploy to [now](https://zeit.co/now)
-- responsive images via [Images API](https://www.contentful.com/developers/docs/references/images-api/)
-- tags for blog posts
+# build for production and launch server
+$ npm run build
+$ npm start
 
-## Getting started
+# generate static project
+$ npm run generate
+```
 
-In case you want to see how to set up a project yourself please check out [the getting started guide](./docs/GETTING-STARTED.md).
-
-## Technical stack
-
-This project is based on [nuxt.js](https://nuxtjs.org/).
-
-### Why nuxt.js?
-
-Nuxt.js is based on [Vue.js](https://vuejs.org/). Vue is a fairly new JS framework that provides excellent documentation and is a pleasure to work with. nuxt.js sits on top of Vue and was choosen because of two main feature:
-
-- dynamic server side rendering for development
-- static file generation for production
-
-For detailed explanation on how things work, check out the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
-
+For detailed explanation on how things work, checkout the [Nuxt.js docs](https://github.com/nuxt/nuxt.js).
