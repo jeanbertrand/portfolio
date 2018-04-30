@@ -1,11 +1,11 @@
 <template>
   <section class="container-fluid">
     <NavBar/>
-    <div class="container">
+    <div class="container content">
         <div class="page-header wrapper">
           <h2>Projects</h2>
         </div>
-      <div class="card-columns">
+      <div class="card-deck">
         <div class="card portfolio-item item" v-for="post in posts" >
           <portfolio-item :post="post"></portfolio-item>
         </div>
@@ -50,6 +50,15 @@ export default {
     text-align: center;
     padding: 2.5em 0;
   }
+}
+
+main {
+  .container-fluid,
+  .container.content {
+    padding-left:0;
+    padding-right:0;
+  }
+
 }
 
 </style>

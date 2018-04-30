@@ -29,7 +29,7 @@ export default {
 <style lang="scss">
 @import '~assets/scss/main';
 
-.card-columns {
+.card-deck {
   padding-top: 1.75em;
 
   .card {
@@ -37,6 +37,15 @@ export default {
     color: $brand-primary;
     margin-bottom: 2.5em;
     @include dropdown-shadow;
+
+    @include media-breakpoint-up(sm) {
+      @include make-col(5);
+    }
+
+    @include media-breakpoint-up(lg) {
+      flex: 0 0 30%;
+      max-width: 30%;
+    }
 
     &:hover {
       text-decoration: none;
