@@ -19,6 +19,10 @@
           </div>
           <div class="gallery">
             <vue-markdown>{{post.fields.body}}</vue-markdown>
+            <img
+              v-for="image in post.fields.images"
+              :key="image"
+              :src="image.fields.file.url" class="image">
           </div>
         </div>
       </main>
@@ -37,7 +41,8 @@ export default {
   asyncData ({ env, params }) {
     return client.getEntries({
       'content_type': env.CTF_BLOG_POST_TYPE_ID,
-      'fields.slug': params.slug
+      'fields.slug': params.slug,
+      'fields.images': params.images
     }).then(entries => {
       return {
         post: entries.items[0]
