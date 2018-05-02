@@ -1,8 +1,8 @@
 {
-  "name": "contentful-blog-in-5-min",
+  "name": "jean-bertrand-portfolio",
   "version": "1.1.1",
-  "description": "A static blog based on Contentful",
-  "author": "stefan judis <stefanjudis@gmail.com>",
+  "description": "Portfolio",
+  "author": "Jean-Bertrand Uwilingiyimana",
   "private": true,
   "dependencies": {
     "contentful": "^4.3.0",
