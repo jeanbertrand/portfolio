@@ -127,6 +127,8 @@ $RECYCLE.BIN/
 .nuxt
 
 # Nuxt generate
+dist
+
 
 # data
 data
