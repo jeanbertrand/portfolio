@@ -123,16 +123,10 @@ $RECYCLE.BIN/
 *.lnk
 
 
-############################################
-# 'blog in 5 minutes' files
-############################################
-
 # Nuxt build
 .nuxt
 
 # Nuxt generate
-dist
-
 
 # data
 data
