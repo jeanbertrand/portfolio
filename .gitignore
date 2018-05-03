@@ -133,8 +133,6 @@ $RECYCLE.BIN/
 # Nuxt generate
 dist
 
-# Contentful configs
-.contentful.json
 
 # data
 data
