@@ -68,7 +68,6 @@ const config = {
   },
 
   /*
-  ** ᕕ( ᐛ )ᕗ CTF-BLOG-IN-5-MINUTES
   ** Make client available everywhere via Nuxt plugins
   */
   plugins: [
@@ -76,13 +75,8 @@ const config = {
   ],
 
   /*
-  ** ᕕ( ᐛ )ᕗ CTF-BLOG-IN-5-MINUTES
-  ** Get all blog posts from Contentful
+  ** Get all content from Contentful
   ** and generate the needed files upfront
-  **
-  ** Included:
-  ** - blog posts
-  ** - available blog post tags
   */
   generate: {
     routes () {
@@ -98,9 +92,9 @@ const config = {
       .then(([entries, postType]) => {
         return [
           // map entries to URLs
-          ...entries.items.map(entry => `/blog/${entry.fields.slug}`),
+          ...entries.items.map(entry => `/portfolio/${entry.fields.slug}`),
           // map all possible tags to URLs
-          ...postType.fields.find(field => field.id === 'tags').items.validations[0].in.map(tag => `/tags/${tag}`)
+          //...postType.fields.find(field => field.id === 'tags').items.validations[0].in.map(tag => `/tags/${tag}`)
         ]
       })
     }
