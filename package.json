@@ -23,7 +23,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^7.1.1",
-    "boostrap": "^2.0.0",
     "bootstrap-vue": "^2.0.0-rc.9",
     "contentful-import": "^4.5.4",
     "cz-conventional-changelog": "^2.0.0",
