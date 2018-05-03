@@ -2,8 +2,7 @@
   <div>
     <header class="tag-page header">
       <div class="foreground">
-        <div class="page-bar wrapper">
-          <a href="/" class="person-name">John Doe</a>
+        <div class="wrapper">
           <Navigation></Navigation>
         </div>
         <div class="page-info wrapper">
@@ -13,9 +12,6 @@
     </header>
 
     <section class="body-container">
-      <div class="items-bar wrapper">
-        <h2>All articles tagged #{{ tag }} ({{ posts.length }})</h2>
-      </div>
       <ul class="items-list wrapper">
         <li class="item" v-for="post in posts">
           <article-preview :post="post"></article-preview>
@@ -27,7 +23,7 @@
 
 <script>
 import {createClient} from '~/plugins/contentful.js'
-import Navigation from '~/components/navigation.vue'
+import Navigation from '~/components/nav.vue'
 import ArticlePreview from '~/components/article-preview.vue'
 
 const client = createClient()

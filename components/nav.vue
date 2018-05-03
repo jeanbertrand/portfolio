@@ -6,13 +6,13 @@
       <NavLinks/>
     </nav>
     <div class="collapse" id="navbarToggleExternalContent">
-        <NavLinks/>
+        <navigationlinks/>
     </div>
   </div>
 </template>
 
 <script>
-import NavLinks from '~/components/NavLinks.vue'
+import NavLinks from '~/components/nav-links.vue'
 
 export default {
   components: {

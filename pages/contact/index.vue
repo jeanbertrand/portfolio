@@ -1,15 +1,15 @@
 <template>
   <section class="container-fluid">
-    <NavBar/>
+    <Navigation/>
   </section>
 </template>
 
 <script>
-import NavBar from '~/components/NavBar.vue'
+import Navigation from '~/components/nav.vue'
 
 export default {
   components: {
-    NavBar
+    Navigation
   }
 }
 </script>

@@ -1,6 +1,6 @@
 <template>
   <section class="container">
-    <NavBar/>
+    <Navigation/>
     <div class="body-container">
       <main class="container wrapper">
         <a href="/portfolio" class="tiny ion-android-arrow-back">Back</a>
@@ -33,7 +33,7 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import {createClient} from '~/plugins/contentful.js'
-import NavBar from '~/components/Navbar.vue'
+import Navigation from '~/components/nav.vue'
 
 const client = createClient()
 
@@ -51,7 +51,7 @@ export default {
     .catch(console.error)
   },
   components: {
-    NavBar,
+    Navigation,
     VueMarkdown
   }
 }

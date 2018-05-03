@@ -29,8 +29,8 @@
 
 <script>
 import {createClient} from '~/plugins/contentful.js'
-import Logo from '~/components/Logo.vue'
-import NavLinks from '~/components/NavLinks.vue'
+import Logo from '~/components/nav-brand.vue'
+import NavLinks from '~/components/nav-links.vue'
 
 const client = createClient()
 

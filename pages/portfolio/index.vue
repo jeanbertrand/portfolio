@@ -1,6 +1,6 @@
 <template>
   <section class="container-fluid">
-    <NavBar/>
+    <Navigation/>
     <div class="container content">
         <div class="page-header wrapper">
           <h2>Projects</h2>
@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import NavBar from '~/components/Navbar.vue'
+import Navigation from '~/components/nav.vue'
 import {createClient} from '~/plugins/contentful.js'
 import PortfolioItem from '~/components/portfolio-item.vue'
 
@@ -35,7 +35,7 @@ export default {
   },
   components: {
     PortfolioItem,
-    NavBar
+    Navigation
   }
 }
 </script>

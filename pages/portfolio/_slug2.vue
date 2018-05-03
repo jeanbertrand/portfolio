@@ -1,7 +1,7 @@
 <template>
   <section class="container-fluid">
     <header class="article header">
-        <NavBar/>
+        <Navigation/>
       <div>
         <!--<img
           :src="post.fields.heroImage.fields.file.url + '?fit=scale&w=350&h=196'"
@@ -29,7 +29,7 @@
 <script>
 import VueMarkdown from 'vue-markdown'
 import {createClient} from '~/plugins/contentful.js'
-import NavBar from '~/components/Navbar.vue'
+import Navigation from '~/components/nav.vue'
 
 const client = createClient()
 
@@ -46,7 +46,7 @@ export default {
     .catch(console.error)
   },
   components: {
-    NavBar,
+    Navigation,
     VueMarkdown
   }
 }
