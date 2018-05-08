@@ -1,6 +1,6 @@
 <template>
   <div class="container-fluid">
-    <main role="main">
+    <main role="main" class="theme_jbu">
       <nuxt/>
     </main>
   </div>

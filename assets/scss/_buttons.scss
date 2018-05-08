@@ -1,0 +1,22 @@
+@import '~assets/scss/variables';
+
+main.theme_jbu {
+
+  .btn {
+      padding: .75rem 1.25rem;
+      border: none;
+
+      &.btn-primary {
+        background-color: $brand-primary;
+
+        &:hover {
+          background-color: darken($brand-primary, 2.5%);
+        }
+      }
+
+      &.btn-light {
+        background-color: $gray-lightest;
+      }
+  }
+
+}

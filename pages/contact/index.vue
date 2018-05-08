@@ -1,25 +1,27 @@
 <template>
-  <section class="container-fluid">
-    <Navigation/>
-    <div class="body-container">
-      <main class="container wrapper">
-        <div class="headline">
+<section>
+  <Navigation/>
+    <header class="header">
+      <div class="page-info wrapper">
           <h1>Contact Me</h1>
+      </div>
+    </header>
+    <div class="container">
+      <form class="offset-md-2 col-md-8" name="contact" method="POST" action="thank-you" netlify>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Your Name">
         </div>
-        <form name="contact" netlify>
-          <p>
-            <label>Name <input type="text" name="name" /></label>
-          </p>
-          <p>
-            <label>Email <input type="email" name="email" /></label>
-          </p>
-          <p>
-            <button type="submit">Send</button>
-          </p>
-        </form>
-      </main>
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Email">
+        </div>
+        <div class="form-group">
+          <textarea type="textarea" rows="6" class="form-control" placeholder="Message"></textarea>
+        </div>
+        <div data-netlify-recaptcha></div>
+        <button type="submit" class="col-md-4 btn btn-primary">Send Message<span class="ion-android-send"></span></button>
+      </form>
     </div>
-  </section>
+</section>
 </template>
 
 <script>
@@ -33,5 +35,28 @@ export default {
 </script>
 
 <style lang="scss">
+@import '~assets/scss/variables';
+@import '~assets/scss/buttons';
 
+header {
+    h1 {
+      text-align: center;
+    }
+}
+
+main .form-control {
+  color: $gray;
+  border: 2px solid $gray-lightest;
+  background-color: rgba($gray-lightest, .25);
+  padding: .75rem;
+
+  &:focus {
+    box-shadow: none;
+    border-color: rgba($brand-primary, .25);
+  }
+}
+
+.centered {
+  text-align: center;
+}
 </style>

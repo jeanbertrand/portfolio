@@ -38,18 +38,20 @@ a {
   }
 }
 
-//buttons
-.btn {
-  text-transform: uppercase;
-  letter-spacing: 2.5px;
-  color: rgba($brand-primary,.5);
-  font-weight: 600;
-  font-size: 1em;
-}
-.btn:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: $brand-primary;
+//link buttons
+.links {
+  .btn {
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    color: rgba($brand-primary,.5);
+    font-weight: 600;
+    font-size: 1em;
+  }
+  .btn:hover {
+    opacity: 1;
+    text-decoration: none;
+    color: $brand-primary;
+  }
 }
 
 //ionicons
