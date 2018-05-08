@@ -7,7 +7,7 @@
       </div>
     </header>
     <div class="container">
-      <form class="offset-md-2 col-md-8" name="contact" method="POST" action="thank-you" netlify>
+      <form class="offset-md-2 col-md-8" name="contact" method="POST" action="/" netlify>
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Your Name">
         </div>
