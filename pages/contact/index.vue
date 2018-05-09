@@ -10,13 +10,13 @@
       <form class="offset-md-2 col-md-8" name="contact" method="POST" action="/portfolio" data-netlify="true">
         <input type="hidden" name="form-name" value="contact" />
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Your Name">
+          <input type="text" class="form-control" name="name" placeholder="Your Name">
         </div>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Email">
+          <input type="text" class="form-control" name="email" placeholder="Email">
         </div>
         <div class="form-group">
-          <textarea type="textarea" rows="6" class="form-control" placeholder="Message"></textarea>
+          <textarea type="textarea" rows="6" class="form-control" name="message" placeholder="Message"></textarea>
         </div>
         <div data-netlify-recaptcha></div>
         <button type="submit" class="col-md-4 btn btn-primary">Send Message<span class="ion-android-send"></span></button>
