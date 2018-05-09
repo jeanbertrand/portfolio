@@ -6,7 +6,7 @@
       <NavLinks/>
     </nav>
     <div class="collapse" id="navbarToggleExternalContent">
-        <navigationlinks/>
+        <NavLinks/>
     </div>
   </div>
 </template>

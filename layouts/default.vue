@@ -7,13 +7,7 @@
 </template>
 
 <script>
-  import Greeting from '~/components/greeting.vue'
-
-  export default {
-    components: {
-      Greeting
-    }
-  }
+  
 </script>
 
 <style lang="scss">
@@ -25,7 +19,7 @@
     font-family: $font-family;
     font-size: 16px;
     line-height: 1.65;
-    color: #373F49;
+    color: $gray;
   }
 
   .wrapper {

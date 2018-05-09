@@ -69,29 +69,4 @@ export default {
   text-align: center;
 }
 
-.social-icons {
-  margin: 0;
-  padding: 0;
-}
-
-.social-icons li {
-  display: inline-block;
-  margin: 2em 1em 0;
-}
-
-.social-icons a {
-  display: block;
-  color: $gray-dark;
-  font-size: 1.5em;
-
-  &:hover {
-    color: $brand-primary;
-  }
-}
-
-.social-icons i {
-  display: block;
-}
-
-
 </style>
