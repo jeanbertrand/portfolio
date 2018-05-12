@@ -28,12 +28,15 @@ const config = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' },
       { rel: 'stylesheet', href: 'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' }
+      { rel: 'stylesheet', href: 'https://unpkg.com/flickity@2/dist/flickity.css'},
+      { rel: 'stylesheet', href: 'https://unpkg.com/flickity-fullscreen@1/fullscreen.css'}
     ],
     script: [
       { src:'https://code.jquery.com/jquery-3.2.1.slim.min.js', type: 'text/javascript', body: true },
       { src:'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', type: 'text/javascript', body: true },
       { src:'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', type: 'text/javascript', body: true },
-      { src:'https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js', type: 'text/javascript', body: true }
+      { src:'https://unpkg.com/flickity@2/dist/flickity.pkgd.js', type: 'text/javascript', body: true },
+      { src:'https://unpkg.com/flickity-fullscreen@1/fullscreen.js', type: 'text/javascript', body: true }
     ]
   },
 
