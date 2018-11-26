@@ -16,13 +16,13 @@
         <div>
           <div class="description">
             <vue-markdown>{{post.fields.description}}</vue-markdown>
-          </div>
-          <div class="gallery">
+            <hr>
             <vue-markdown>{{post.fields.body}}</vue-markdown>
-            <img
-              v-for="image in post.fields.images"
-              :key="image"
-              :src="image.fields.file.url" class="image">
+          </div>
+          <div class="gallery" >
+            <no-ssr><Flickity ref="Flickity" :options="flickityOptions" >
+              <img v-for="image in post.fields.images" :key="image" :src="image.fields.file.url" class="carousel-image" :data-flickity-lazyload="image.fields.file.url">
+            </Flickity></no-ssr>
           </div>
         </div>
       </main>
@@ -34,6 +34,13 @@
 import VueMarkdown from 'vue-markdown'
 import {createClient} from '~/plugins/contentful.js'
 import Navigation from '~/components/nav.vue'
+
+// plugins/vue-flickity.js
+
+import Vue from 'vue';
+import Flickity from 'vue-flickity';
+
+Vue.component('Flickity', Flickity);
 
 const client = createClient()
 
@@ -48,8 +55,19 @@ export default {
         post: entries.items[0]
       }
     })
+    return {
+      flickityOptions: {
+      initialIndex: 3,
+      prevNextButtons: false,
+      pageDots: false,
+      wrapAround: true
+
+      // any options from Flickity can be used
+      }
+    }
     .catch(console.error)
   },
+
   components: {
     Navigation,
     VueMarkdown
@@ -59,6 +77,8 @@ export default {
 
 <style lang="scss">
 @import '~assets/scss/main';
+
+* { box-sizing: border-box; }
 
 .container.wrapper {
   padding-left:0;
@@ -75,31 +95,30 @@ export default {
       border-bottom: 1px solid $gray-lightest;
     }
   }
-}
-.tags {
-  margin: 1em 0 2em;
-}
 
-.tag:link,
-.tag:visited {
-  color: rgba($gray-light, .6);
-  text-decoration: none;
-  display: inline-block;
-  padding: .33333rem .5rem;
-  padding-left:0;
-  margin-right: .5em;
-  font-size: 12px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: $btn-letter-spacing;
+  .carousel {
+    background: #EEE;
+
+    .carousel-image {
+      display: block;
+      height: 300px;
+      /* set min-width, allow images to set cell width */
+      min-width: 150px;
+      max-width: 100%;
+      margin-right: 10px;
+      /* vertically center */
+      top: 50%;
+      transform: translateY(-50%)
+    }
+
+    &.is-fullscreen {
+      .carousel-image {
+        height: auto;
+        max-height: 100%;
+      }
+    }
+
+  }
 
 }
-
-.tag:active,
-.tag:hover,
-.tag:focus {
-  color: $brand-primary;
-  border-color: transparent;
-}
-
 </style>

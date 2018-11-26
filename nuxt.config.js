@@ -35,8 +35,8 @@ const config = {
       { src:'https://code.jquery.com/jquery-3.2.1.slim.min.js', type: 'text/javascript', body: true },
       { src:'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js', type: 'text/javascript', body: true },
       { src:'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js', type: 'text/javascript', body: true },
-      { src:'https://unpkg.com/flickity@2/dist/flickity.pkgd.js', type: 'text/javascript', body: true },
-      { src:'https://unpkg.com/flickity-fullscreen@1/fullscreen.js', type: 'text/javascript', body: true }
+      { src:'https://unpkg.com/flickity@2/dist/flickity.pkgd.js', type: 'text/javascript'},
+      { src:'https://unpkg.com/flickity-fullscreen@1/fullscreen.js', type: 'text/javascript'}
     ]
   },
 
@@ -74,7 +74,8 @@ const config = {
   ** Make client available everywhere via Nuxt plugins
   */
   plugins: [
-    '~/plugins/contentful'
+    { src: '~/plugins/contentful' },
+    { src: '~/plugins/VueFlickity', ssr: false }
   ],
 
   /*
