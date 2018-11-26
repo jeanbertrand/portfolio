@@ -57,6 +57,34 @@ a {
   }
 }
 
+//tags
+.tags {
+  margin: 1em 0 2em;
+}
+
+.tag:link,
+.tag:visited {
+  color: rgba($gray-light, .6);
+  text-decoration: none;
+  display: inline-block;
+  padding: .33333rem .5rem;
+  padding-left:0;
+  margin-right: .5em;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: $btn-letter-spacing;
+
+}
+
+.tag:active,
+.tag:hover,
+.tag:focus {
+  color: $brand-primary;
+  border-color: transparent;
+}
+
+
 //ionicons
 *[class*="ion-"]:before {
   margin: 0 .5em;
