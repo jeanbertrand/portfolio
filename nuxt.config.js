@@ -27,7 +27,7 @@ const config = {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' },
       { rel: 'stylesheet', href: 'https://cdnjs.cloudflare.com/ajax/libs/minireset.css/0.0.2/minireset.min.css' },
-      { rel: 'stylesheet', href: 'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' }
+      { rel: 'stylesheet', href: 'https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' },
       { rel: 'stylesheet', href: 'https://unpkg.com/flickity@2/dist/flickity.css'},
       { rel: 'stylesheet', href: 'https://unpkg.com/flickity-fullscreen@1/fullscreen.css'}
     ],
